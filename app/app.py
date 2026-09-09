@@ -121,20 +121,30 @@ EXAMPLES = [
 # --------------------------------------------------------------------------- #
 # Cached resource loaders
 # --------------------------------------------------------------------------- #
+def _is_lfs_pointer(path: Path) -> bool:
+    """Check if a file is a Git LFS pointer instead of the actual binary."""
+    try:
+        with path.open("rt", encoding="utf-8", errors="ignore") as f:
+            return f.read(100).startswith("version https://git-lfs.github.com/spec/v1")
+    except Exception:
+        return False
+
 def _ensure_model_on_disk() -> None:
     """Download the trained artefacts on first run if they aren't on disk.
 
     On Streamlit Community Cloud the 268 MB ``mental_health_model.pkl`` is
     too large to commit, so ``app/models/fetch_model.py`` pulls both
     ``mental_health_model.pkl`` and ``mlb.pkl`` from ``MODEL_URL`` (env var
-    or Streamlit secret). The fetch only runs when files are missing, so
-    the local dev workflow is unchanged.
+    or Streamlit secret). The fetch only runs when files are missing,
+    or if they are Git LFS pointers, so the local dev workflow is unchanged.
     """
     if (
         MODEL_PATH.exists()
         and MODEL_PATH.stat().st_size > 0
+        and not _is_lfs_pointer(MODEL_PATH)
         and MLB_PATH.exists()
         and MLB_PATH.stat().st_size > 0
+        and not _is_lfs_pointer(MLB_PATH)
     ):
         return
     # Lazy import so the app can still boot even if the downloader is
