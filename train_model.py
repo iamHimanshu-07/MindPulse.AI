@@ -1,5 +1,5 @@
 """
-Train the MindPulse.AI multi-label emotion classifier and persist the
+Train the MindPulse multi-label emotion classifier and persist the
 pipeline + MultiLabelBinarizer next to the Streamlit app.
 
 Usage:

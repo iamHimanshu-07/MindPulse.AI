@@ -47,7 +47,7 @@ except ImportError:  # pragma: no cover
 # the MODEL_URL env var (or st.secrets["MODEL_URL"]) to point at your
 # own release / bucket.
 HF_DEFAULT_BASE_URL = (
-    "https://huggingface.co/iamHimanshu-07/MindPulse.AI/resolve/main"
+    "https://huggingface.co/iamHimanshu-07/MindPulse/resolve/main"
 )
 
 # Artefact filenames (relative to the base URL).
@@ -121,7 +121,7 @@ def _stream_download(
     token = os.environ.get("HF_TOKEN") or (st.secrets.get("HF_TOKEN") if _HAVE_ST else None)
     if token:
         sess.headers.update({"Authorization": f"Bearer {token}"})
-    sess.headers.update({"User-Agent": "MindPulse.AI/1.0 (+streamlit)"})
+    sess.headers.update({"User-Agent": "MindPulse/1.0 (+streamlit)"})
 
     partial = dest.with_suffix(dest.suffix + ".part")
     with sess.get(url, stream=True, timeout=600, allow_redirects=True) as r:

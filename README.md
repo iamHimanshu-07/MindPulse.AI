@@ -1,4 +1,4 @@
-# 🧠 MindPulse.AI — Mental Health Emotion Detector
+# 🧠 MindPulse — Mental Health Emotion Detector
 
 [![Streamlit](https://img.shields.io/badge/Streamlit-1.30+-FF4B4B?logo=streamlit&logoColor=white)](https://streamlit.io)
 [![scikit-learn](https://img.shields.io/badge/scikit--learn-1.3+-F7931E?logo=scikitlearn&logoColor=white)](https://scikit-learn.org)
@@ -7,7 +7,7 @@
 
 > **AI-powered, multi-label mental-health emotion detection from free-form text.**
 
-MindPulse.AI is an end-to-end NLP project that:
+MindPulse is an end-to-end NLP project that:
 
 1. Loads the `DepressionEmo` Reddit dataset (`anger`, `sadness`, `emptiness`, `hopelessness`, `worthlessness`, `loneliness`, `suicide intent`, `brain dysfunction (forget)`).
 2. Trains a **TF-IDF (1-2 grams, 10k features) + OneVsRest(RandomForest)** multi-label classifier.
@@ -40,7 +40,7 @@ MindPulse.AI is an end-to-end NLP project that:
 ## 🗂 Project structure
 
 ```
-MindPulse.AI/
+MindPulse/
 ├── app/
 │   ├── app.py                 # Streamlit front-end
 │   └── models/                # Trained artefacts (created by train_model.py)
@@ -71,8 +71,8 @@ MindPulse.AI/
 ### 1. Clone & enter
 
 ```bash
-git clone https://github.com/iamHimanshu-07/MindPulse.AI.git
-cd MindPulse.AI
+git clone https://github.com/iamHimanshu-07/MindPulse.git
+cd MindPulse
 ```
 
 ### 2. Create a virtual environment
