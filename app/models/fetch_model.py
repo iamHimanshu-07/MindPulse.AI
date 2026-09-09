@@ -118,6 +118,9 @@ def _stream_download(
 
     log(f"[fetch_model] {url} → {dest.name}")
     sess = requests.Session()
+    token = os.environ.get("HF_TOKEN") or (st.secrets.get("HF_TOKEN") if _HAVE_ST else None)
+    if token:
+        sess.headers.update({"Authorization": f"Bearer {token}"})
     sess.headers.update({"User-Agent": "MindPulse.AI/1.0 (+streamlit)"})
 
     partial = dest.with_suffix(dest.suffix + ".part")
