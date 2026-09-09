@@ -131,24 +131,9 @@ The RandomForest is used for predictions; the LogisticRegression is used **only*
 
 ## 🧪 Using the app
 
-1. Type or paste any text into the **Your text** box.
+Type or paste any text into the **Your text** box.
  <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/cabdbf1e-0913-40f0-96a6-3fccb59e6110" />
-  
-2. Adjust the **Prediction threshold** in the sidebar (default 0.40).
-   - Higher threshold → fewer, more confident labels.
-   - Lower threshold → more labels, more false positives.
-<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/34d4b4bb-f892-4f86-b5d7-fa1a0957d1a6" />
-
-3. Click **🔍 Analyze**.
-<img width="1365" height="536" alt="image" src="https://github.com/user-attachments/assets/9afe486c-aca4-4bf8-b45b-b06327856650" />
-
-4. Read the **Predicted emotions**, the **probability bar chart**, and (if relevant) the **high-risk warning**.
-<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/ff183171-ce70-45a7-b9ce-62ee4336e316" />
-
-5. Optionally **Download PDF (.pdf)** for the full audit trail.
-<img width="1365" height="110" alt="image" src="https://github.com/user-attachments/assets/9c89e8e3-cfe4-41f0-9aa1-2677920b5661" />
-<img width="635" height="730" alt="image" src="https://github.com/user-attachments/assets/624e497f-5e96-4b1b-b9b0-7aa29e4e44e8" />
-
+ 
 ---
 
 ## 🤝 Contributing
