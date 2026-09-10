@@ -151,3 +151,11 @@ Type or paste any text into the **Your text** box.
 [Apache-2.0](LICENSE)
 
 ---
+
+## Credits
+
+Himanshu Singh Yadav 
+
+AI & ML Engineer
+
+---
